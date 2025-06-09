@@ -22,7 +22,7 @@ export default function Projects() {
       ],
     },
     {
-      title: "Rogue's Descent",
+      title: "Rogues Descent",
       description: "A game we developed during our internship",
       link: "https://RoguesDescent.site",
       images: [
@@ -66,7 +66,7 @@ export default function Projects() {
           href="/contact"
           className="px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all"
         >
-          Let's Work Together
+          Let&apos;s Work Together
         </a>
       </div>
     </section>

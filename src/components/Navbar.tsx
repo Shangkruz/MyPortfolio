@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // Using loadSlim for better performance
+import { loadSlim } from "tsparticles-slim";
+// Fix: Import the necessary type for the engine
+import type { Engine } from "tsparticles-engine"; // <--- Add this import
 
 export default function Navbar() {
   const [bgColor, setBgColor] = useState("bg-transparent");
@@ -21,8 +23,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Initialize particles using loadSlim
-  const particlesInit = async (engine: any) => {
+  // Fix: Use the imported Engine type instead of 'any'
+  const particlesInit = async (engine: Engine) => { // <--- Change 'any' to 'Engine'
     await loadSlim(engine);
   };
 
